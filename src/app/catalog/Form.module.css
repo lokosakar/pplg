@@ -1,0 +1,81 @@
+.container {
+  background-color: var(--bg-main);
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.form {
+  background-color: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.row .inputGroup {
+  flex: 1;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.inputGroup input, .inputGroup select {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border);
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.inputGroup input:focus, .inputGroup select:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.inputGroup input::placeholder {
+  color: var(--border);
+}
+
+.btnSubmit {
+  background-color: var(--accent-primary);
+  color: var(--bg-main);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+.btnSubmit:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}

@@ -1,0 +1,17 @@
+/* Copas saja dari Catalog.module.css, struktur UI-nya mirip, ubah bagian badge */
+.container { width: 100%; }
+.header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; }
+.titleArea h1 { font-size: 1.8rem; color: var(--text-primary); margin-bottom: 0.3rem; }
+.titleArea p { color: var(--text-muted); font-size: 0.95rem; }
+.btnAdd { background-color: var(--accent-primary); color: var(--bg-main); padding: 0.7rem 1.2rem; border-radius: var(--radius-md); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+.btnAdd:hover { background-color: var(--accent-hover); }
+
+.tableWrapper { background-color: var(--bg-card); border: 1px solid var(--bg-hover); border-radius: var(--radius-lg); overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 1rem 1.5rem; text-align: left; border-bottom: 1px solid var(--bg-hover); }
+.table th { background-color: rgba(0, 0, 0, 0.2); color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; }
+.table tbody tr:hover { background-color: rgba(255, 255, 255, 0.02); }
+
+.highlight { display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-family: monospace; }
+.price { font-weight: bold; color: var(--text-primary); }
+.badgeSuccess { background-color: rgba(0, 229, 155, 0.1); color: var(--accent-primary); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;}
