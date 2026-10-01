@@ -661,9 +661,49 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-    padding: 1.75rem;
+    padding: 1.75rem 1.25rem;
+  }
+  .bannerBadgeArea {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .bannerContent h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+  .bannerContent p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .quickActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+  }
+  .primaryActionBtn, .secondaryActionBtn, .tertiaryActionBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .miniTable {
+    min-width: 540px;
+  }
+  .tableResponsive {
+    -webkit-overflow-scrolling: touch;
+  }
+  .cardValue {
+    font-size: 1.65rem;
+  }
+  .panelCard {
+    padding: 1.25rem 1rem;
   }
 }

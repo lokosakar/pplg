@@ -1,9 +1,14 @@
 import './globals.css';
-import Sidebar from './components/sidebar/Sidebar';
+import AppLayout from './components/layout/AppLayout';
 
 export const metadata = {
   title: 'Lionel Game Store — Modern Management Hub',
   description: 'Sistem Manajemen Katalog Game & Kasir Transaksi Modern',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
@@ -14,17 +19,9 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body>
-        <Sidebar />
-        <main style={{ 
-          flex: 1, 
-          height: '100vh', 
-          overflowY: 'auto', 
-          overflowX: 'hidden',
-          padding: '2.5rem 3rem',
-          position: 'relative' 
-        }}>
+        <AppLayout>
           {children}
-        </main>
+        </AppLayout>
       </body>
     </html>
   );

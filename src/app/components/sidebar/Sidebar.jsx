@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Gamepad2, ShoppingCart, LayoutDashboard, Flame, Sparkles, Database, Users } from 'lucide-react';
+import { Gamepad2, ShoppingCart, LayoutDashboard, Flame, Sparkles, Database, Users, X } from 'lucide-react';
 import styles from './Sidebar.module.css';
 
-export default function Sidebar() {
+export default function Sidebar({ onCloseMobile }) {
   const pathname = usePathname();
 
   const menu = [
@@ -29,6 +29,17 @@ export default function Sidebar() {
           </div>
           <p>GAME STORE HUB</p>
         </div>
+
+        {/* Close Button on Mobile Drawer */}
+        {onCloseMobile && (
+          <button 
+            className={styles.closeDrawerBtn} 
+            onClick={onCloseMobile}
+            aria-label="Tutup navigasi"
+          >
+            <X size={20} />
+          </button>
+        )}
       </div>
 
       {/* Navigation */}
@@ -45,6 +56,7 @@ export default function Sidebar() {
                 key={item.path} 
                 href={item.path} 
                 className={`${styles.link} ${isActive ? styles.active : ''}`}
+                onClick={onCloseMobile}
               >
                 <div className={styles.linkIconWrapper}>
                   {item.icon}

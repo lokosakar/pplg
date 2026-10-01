@@ -331,3 +331,25 @@
     position: static;
   }
 }
+
+@media (max-width: 600px) {
+  .formCard {
+    padding: 1.5rem 1.15rem;
+  }
+  .titleWrapper h1 {
+    font-size: 1.65rem;
+  }
+  .vipCard {
+    padding: 1.5rem 1.25rem;
+    gap: 1.5rem;
+  }
+  .cardMemberName {
+    font-size: 1.1rem;
+  }
+  .formActions {
+    flex-direction: column-reverse;
+  }
+  .btnSubmit, .btnCancel {
+    width: 100%;
+  }
+}

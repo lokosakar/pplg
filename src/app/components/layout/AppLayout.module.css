@@ -1,0 +1,173 @@
+.layoutWrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Mobile Header (Hidden on Desktop) */
+.mobileHeader {
+  display: none;
+}
+
+.sidebarWrapper {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.mainViewport {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2.5rem 3rem;
+  position: relative;
+}
+
+/* Mobile & Tablet Breakpoint (<= 1024px) */
+@media (max-width: 1024px) {
+  .layoutWrapper {
+    flex-direction: column;
+  }
+
+  .mobileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    background: rgba(8, 11, 17, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0 1.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .hamburgerBtn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: #ffffff;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+  }
+
+  .hamburgerBtn:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .mobileBrand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mobileBrandIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-xs);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 182, 212, 0.2));
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #34d399;
+  }
+
+  .mobileBrandText {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 40%, #a7f3d0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .mobileProBadge {
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 0.1rem 0.4rem;
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: var(--radius-full);
+    color: #6ee7b7;
+  }
+
+  .mobileActions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mobileKasirBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(16, 185, 129, 0.35);
+  }
+
+  /* Slide-out Sidebar Drawer */
+  .sidebarWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+    box-shadow: 10px 0 40px rgba(0, 0, 0, 0.7);
+  }
+
+  .drawerBackdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 95;
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Main Viewport Adjustments for Mobile Header */
+  .mainViewport {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    padding: 5rem 1.5rem 2.5rem 1.5rem;
+    overflow-y: visible;
+  }
+}
+
+/* Small Smartphone Breakpoint (<= 640px) */
+@media (max-width: 640px) {
+  .mainViewport {
+    padding: 4.8rem 0.95rem 2rem 0.95rem;
+  }
+}

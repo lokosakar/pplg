@@ -143,3 +143,9 @@ input, select, textarea {
 .mono-font {
   font-family: 'JetBrains Mono', monospace;
 }
+
+@media (max-width: 1024px) {
+  body {
+    display: block;
+  }
+}

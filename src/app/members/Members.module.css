@@ -555,9 +555,50 @@
   transform: translateY(-1px);
 }
 
-/* Responsive */
+/* Responsive Adjustments */
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  min-width: 680px;
+}
+
 @media (max-width: 1024px) {
   .kpiRow {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .btnAdd {
+    width: 100%;
+    justify-content: center;
+  }
+  .searchBox {
+    width: 100%;
+  }
+  .searchBox input {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .titleArea h1 {
+    font-size: 1.65rem;
+  }
+  .titleArea p {
+    font-size: 0.88rem;
+  }
+  .modalCard {
+    padding: 1.5rem 1.25rem;
+    max-width: 95%;
   }
 }
