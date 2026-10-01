@@ -30,7 +30,7 @@ Laporan & Ringkasan: Rekapitulasi total pendapatan, riwayat transaksi, dan peman
 5. Teknologi yang Digunakan
 Bahasa Pemrograman: JavaScript
 
-Database: MySQL / MariaDB
+Database: MySQL 
 
 Antarmuka (Frontend): HTML5, CSS3, Bootstrap 5 (Responsive Layout)
 
@@ -48,25 +48,17 @@ produk: Menyimpan master data barang (id_produk [PK], id_kategori [FK], nama_pro
 transaksi: Menyimpan nota induk transaksi (id_transaksi [PK], kode_invoice, tanggal, total_harga, bayar, kembalian).
 
 detail_transaksi: Menyimpan item rincian transaksi (id_detail [PK], id_transaksi [FK], id_produk [FK], jumlah, subtotal).
-
-7. Cara Instalasi dan Menjalankan Aplikasi
-Clone repositori ini atau ekstrak folder proyek ke direktori server lokal:
-
-XAMPP: C:/xampp/htdocs/XII_RPL_NomorAbsen_Nama
-
-Jalankan kontrol panel XAMPP dan aktifkan modul Apache dan MySQL.
-
-Buka browser dan akses phpMyAdmin di http://localhost/phpmyadmin.
-
-Buat database baru (misal: db_proyek_sts).
-
-Klik tab Import, pilih file database yang tersedia di dalam folder proyek (database.sql), lalu klik Go.
-
-Sesuaikan konfigurasi koneksi database pada file config/koneksi.php (host, user, password, dbname).
-
-Buka browser dan jalankan aplikasi melalui URL: http://localhost/XII_RPL_NomorAbsen_Nama.
-
-
+1. Pastikan Node.js dan XAMPP (MySQL) sudah terpasang di komputer.
+2. Buka XAMPP Control Panel lalu aktifkan modul Apache dan MySQL.
+3. Buka browser ke http://localhost/phpmyadmin, buat database baru, lalu import file .sql yang sudah disediakan.
+4. Buka terminal (CMD / Git Bash) di dalam folder utama proyek ini.
+5. Jalankan perintah instalasi dependensi:
+   npm install
+6. Jalankan aplikasi dengan perintah:
+   npm start
+   (atau: node pplg/app.js)
+7. Buka browser dan akses aplikasi melalui URL:
+   http://localhost:3000
 
 8. Kendala dan Solusi Perbaikan
 Kendala 1: Terjadi galat saat memproses transaksi karena data pada tabel rincian (detail_transaksi) gagal disimpan akibat foreign key tidak menemukan ID induk transaksi yang baru dibuat.
